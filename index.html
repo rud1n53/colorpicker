@@ -9,6 +9,7 @@
         body {
         background-color: aliceblue;
         margin: 0;
+        height: -webkit-fill-available;
         }
         .circle {
         width: 250px;
@@ -188,14 +189,4 @@
         colorContainer.style.width = "250px"; 
         setTimeout(() => colorContainer.style.transition = "all 0s", 1000);
     }
-
-    function setCustomVhw() {
-      const vh = window.innerHeight * 0.01;
-      const vw = window.innerWidth * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-      document.documentElement.style.setProperty('--vw', `${vw}px`);
-    }
-    
-    setCustomVhw();
-    window.addEventListener('resize', setCustomVhw);
 </script>
