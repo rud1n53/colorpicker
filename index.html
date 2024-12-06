@@ -188,4 +188,12 @@
         colorContainer.style.width = "250px"; 
         setTimeout(() => colorContainer.style.transition = "all 0s", 1000);
     }
+
+    function setCustomVh() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setCustomVh();
+    window.addEventListener('resize', setCustomVh);
 </script>
